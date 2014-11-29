@@ -1,3 +1,19 @@
+<div class="well form-horizontal">
+    <div class="form-group last">
+        <label for="inputEmail3" class="col-sm-3 control-label">Your comment</label>
+        <div class="col-sm-7">
+            {{view Ember.TextField valueBinding='controller.comment' placeholder='your comment' class='form-control'}}
+        </div>
+        <div class="col-sm-2">
+            <button {{action 'add'}} class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</div>
+Comments:
 <div class="well">
-   comments comments
+    <ul class="comments">
+        {{#each model}}
+            <li><a href="#">{{content}}</a> <span class="timestamp">({{date timestamp}})</span></li>
+        {{/each}}
+    </ul>
 </div>

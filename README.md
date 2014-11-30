@@ -32,3 +32,5 @@ or e.g. osx:
 
     $ cd test; bower install; grunt test
 
+
+> open test/index.html in your favorite browser

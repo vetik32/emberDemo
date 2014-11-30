@@ -1,27 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Unit Testing Basics</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mocha Spec Runner</title>
-    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+    <link rel="stylesheet" href="vendor/qunit/qunit/qunit.css">
+    <script src="../app/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../app/vendor/handlebars/handlebars.js"></script>
+    <script src="../app/vendor/ember/ember.js"></script>
+    <script src="../app/vendor/ember-data/ember-data.js"></script>
+    <script src="../app/vendor/moment/min/moment.min.js"></script>
+    <script src="vendor/qunit/qunit/qunit.js"></script>
+
+    <!-- source to test -->
+    <script src="../.tmp/scripts/compiled-templates.js"></script>
+    <script src="../.tmp/scripts/combined-scripts.js"></script>
+
+    <!-- specs -->
+    <script src="spec/test.js"></script>
 </head>
 <body>
-    <div id="mocha"></div>
-    <script src="bower_components/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <script src="bower_components/chai/chai.js"></script>
-    <script>
-        var assert = chai.assert;
-        var expect = chai.expect;
-        var should = chai.should();
-    </script>
-
-    <!-- include source files here... -->
-
-    <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
-
-    <script>mocha.run()</script>
+<div id="qunit"></div>
+<div id="ember-testing"></div>
 </body>
 </html>

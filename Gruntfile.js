@@ -21,6 +21,7 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
+        vendor: 'app/vendor',
         dist: 'dist'
     };
 
@@ -118,12 +119,10 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: true
             }
         },
         compass: {
@@ -134,7 +133,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
+                importPath: '<%= yeoman.vendor %>',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
@@ -238,8 +237,8 @@ module.exports = function (grunt) {
           app: {
             options: {
               variables: {
-                ember: 'bower_components/ember/ember.js',
-                ember_data: 'bower_components/ember-data/ember-data.js'
+                ember: 'vendor/ember/ember.js',
+                ember_data: 'vendor/ember-data/ember-data.js'
               }
             },
             files: [
@@ -249,8 +248,8 @@ module.exports = function (grunt) {
           dist: {
             options: {
               variables: {
-                ember: 'bower_components/ember/ember.prod.js',
-                ember_data: 'bower_components/ember-data/ember-data.prod.js'
+                ember: 'vendor/ember/ember.prod.js',
+                ember_data: 'vendor/ember-data/ember-data.prod.js'
               }
             },
             files: [
@@ -266,7 +265,7 @@ module.exports = function (grunt) {
                         expand: true,
                         flatten: true,
                         filter: 'isFile',
-                        cwd: '<%= yeoman.app %>/bower_components/',
+                        cwd: '<%= yeoman.vendor %>/',
                         dest: '<%= yeoman.app %>/styles/fonts/',
                         src: [
                             'bootstrap-sass-official/vendor/assets/fonts/bootstrap/**'
@@ -362,7 +361,7 @@ module.exports = function (grunt) {
         'concurrent:test',
         'connect:test',
         'neuter:app',
-        'mocha'
+        'karma'
     ]);
 
     grunt.registerTask('build', [

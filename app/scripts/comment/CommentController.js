@@ -11,6 +11,8 @@ Emberdemo.CommentController = Ember.Controller.extend({
                 return;
             }
 
+            this.set('comment', '');
+
             this.store.createRecord('comment', {
                 content: newComment
             });

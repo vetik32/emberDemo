@@ -34,3 +34,9 @@ or e.g. osx:
 
 
 > open test/index.html in your favorite browser
+
+#Production Build
+
+> It's default task, will be created `dist` directory whiting the project
+
+    $ grunt

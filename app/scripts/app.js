@@ -13,8 +13,5 @@ require('scripts/application/*');
 require('scripts/comment/*');
 
 Ember.Handlebars.registerBoundHelper('date', function (date) {
-    if (typeof date === 'string' ) {
-        date = new Date(date) ;
-    }
     return moment(date).fromNow();
 });

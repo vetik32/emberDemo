@@ -1,6 +1,5 @@
-/**
- * Created by vandries on 11/29/14.
- */
+
+// TODO: ArrayController, sorted by timestamp by default
 
 Emberdemo.CommentController = Ember.Controller.extend({
     actions: {

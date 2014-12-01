@@ -1,16 +1,21 @@
+<h4>Your Comment:</h4>
 <div class="well form-horizontal">
     <div class="form-group last">
-        <div class="col-sm-10">
+        <div class="col-md-3">
+            <img class="img-thumbnail"/>
+        </div>
+
+        <div class="col-md-5">
             {{input type="text" valueBinding='controller.comment' placeholder='your comment'
               class='form-control' name="newComment"}}
         </div>
-        <div class="col-sm-2">
+        <div class="col-md-4">
             <button {{action 'add'}} class="btn btn-primary">Add</button>
         </div>
     </div>
 </div>
-Comments:
-<div class="well">
+<h4>Comments:</h4>
+<div class="well comments-placeholder">
     <ul class="comments">
         {{#each model}}
             <li><span class="comment">{{content}}</span> <span class="timestamp">({{date timestamp}})</span></li>

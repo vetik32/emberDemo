@@ -43,6 +43,6 @@ test('new comment is added', function () {
     andThen(function () {
         equal(find(inputSelector).val(), '');
         equal(find(commentsSelector).length, 3);
-        equal(find(commentsSelector).last().find('.comment').text(), newComment)
+        equal(find(commentsSelector).last().find('.comment').text(), newComment);
     });
 });

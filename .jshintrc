@@ -20,6 +20,8 @@
         "Ember": true,
         "Handlebars": true,
         "moment": true,
-        "DS": true
+        "DS": true,
+        "test": true,
+        "equal": true
     }
 }

@@ -37,6 +37,6 @@ or e.g. osx:
 
 #Production Build
 
-> It's default task, will be created `dist` directory whiting the project
+> It's default task, will be created `dist` directory within the project
 
     $ grunt

@@ -1,16 +1,11 @@
 <h4>Your Comment:</h4>
-<div class="well form-horizontal">
+<div class="well form-horizontal new-comment-form">
     <div class="form-group last">
-        <div class="col-md-3">
             <img class="img-thumbnail"/>
-        </div>
 
-        <div class="col-md-5">
             {{input type="text" valueBinding='controller.comment' placeholder='your comment'
               class='form-control' name="newComment"}}
-        </div>
-        <div class="col-md-4">
-            <button {{action 'add'}} class="btn btn-primary">Add</button>
+            <button {{action 'add'}} class="btn btn-primary" {{bind-attr disabled=disabled}}>Add</button>
         </div>
     </div>
 </div>

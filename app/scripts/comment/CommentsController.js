@@ -1,7 +1,8 @@
 
 // TODO: ArrayController, sorted by timestamp by default
 
-Emberdemo.CommentController = Ember.Controller.extend({
+Emberdemo.CommentsController = Ember.Controller.extend({
+    comment: '',
     actions: {
         add: function () {
             var newComment = this.get('comment');
@@ -16,5 +17,8 @@ Emberdemo.CommentController = Ember.Controller.extend({
                 content: newComment
             });
         }
-    }
+    },
+    disabled: function(){
+        return Ember.isEmpty(this.get('comment'));
+    }.property('comment')
 });

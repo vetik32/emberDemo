@@ -1,19 +1,17 @@
-<h4>Your Comment:</h4>
-<div class="well form-horizontal new-comment-form">
-    <div class="form-group last">
-            <img class="img-thumbnail"/>
-
-            {{input type="text" valueBinding='controller.comment' placeholder='your comment'
-              class='form-control' name="newComment"}}
-            <button {{action 'add'}} class="btn btn-primary" {{bind-attr disabled=disabled}}>Add</button>
-        </div>
-    </div>
-</div>
-<h4>Comments:</h4>
+<div>Topics:</div>
 <div class="well comments-placeholder">
-    <ul class="comments">
-        {{#each model}}
-            <li><span class="comment">{{content}}</span> <span class="timestamp">({{date timestamp}})</span></li>
-        {{/each}}
+    <ul class="topics">
+        <li>
+            <h4>No topic.</h4>
+            <div class="comments-placeholder">
+                <ul class="comments">
+                    {{each model itemViewClass="comment"}}
+                </ul>
+                <div style="margin-left: 40px">
+                    {{#link-to "comments.new"}}reply{{/link-to}}
+                </div>
+            </div>
+        </li>
     </ul>
 </div>
+{{outlet}}

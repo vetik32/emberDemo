@@ -1,4 +1,5 @@
 Emberdemo.Router.map(function () {
-  // Add your routes here
-    this.resource('comments');
+    this.resource('comments', function () {
+        this.route('new');
+    });
 });

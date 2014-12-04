@@ -10,11 +10,11 @@ Emberdemo.Comment = DS.Model.extend({
 Emberdemo.Comment.FIXTURES = [
     {
         id: 1,
-        content: 'my first comment',
+        content: 'When the topics will appear?',
         timestamp: new Date(1388527200000)
     }, {
         id: 2,
-        content: 'my second comment',
+        content: 'Still no topics?',
         timestamp: new Date(1391205600000)
     }
 ];

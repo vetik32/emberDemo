@@ -5,7 +5,9 @@
             <h4>No topic.</h4>
             <div class="comments-placeholder">
                 <ul class="comments">
-                    {{each model itemViewClass="comment"}}
+                    {{#each comment in model}}
+                        {{view "comment"}}
+                    {{/each}}
                 </ul>
                 <div style="margin-left: 40px">
                     {{#link-to "comments.new"}}reply{{/link-to}}

@@ -1,0 +1,17 @@
+<div class="well">
+    <form class="form-horizontal new-item-form">
+        <div class="form-group last">
+            <div class="col-sm-1 avatar">
+                <img class="img-thumbnail"/>
+            </div>
+            <div class="col-sm-10">
+                {{textarea valueBinding='controller.message' placeholder='new topic'
+                class='form-control' name="newComment"}}
+                <p>
+                    <button {{action 'save'}} class="btn btn-primary" {{bind-attr disabled=disabled}}>Add</button>
+                    <button {{action 'cancel'}} class="btn btn-default">Cancel</button>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>

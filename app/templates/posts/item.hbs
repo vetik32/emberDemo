@@ -1,0 +1,6 @@
+<div class="post">
+    {{#link-to 'post' post}}{{post.content}}{{/link-to}} <span class="timestamp">({{date post.timestamp}})</span>
+    {{#if post.comments}}
+        <span class="commentsCount">(Comments: {{post.comments.length}})</span>
+    {{/if}}
+</div>

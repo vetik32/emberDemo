@@ -1,0 +1,18 @@
+<h3>Posts</h3>
+
+<div class="well posts-container">
+    {{#if model}}
+        <ul>
+            {{#each post in model}}
+                {{view 'posts.item'}}
+            {{/each}}
+        </ul>
+    {{else}}
+        {{emptyMessage}}
+    {{/if}}
+</div>
+
+<p>
+    {{#link-to 'posts.new' class="btn btn-primary"}}Add New Topic{{/link-to}}
+</p>
+{{outlet}}

@@ -9,15 +9,10 @@
     .comments {
         color: #555;
 
-        .timestamp {
-            font-style: italic;
-            color: gray;
-            font-size: .9em;
-        }
     }
 }
 
-.new-comment-form {
+.new-item-form {
     .img-thumbnail {
         background-image: url("images/64x64.png");
         width: 72px;
@@ -27,22 +22,10 @@
     .avatar {
         width: 102px;
     }
-}
 
-@media screen and (min-width: $screen-md-min) {
-}
-
-@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-}
-
-@media screen and (max-width: $screen-xs-max) {
-
-    .new-comment-form {
-
-        .img-thumbnail,
-        .form-control {
-            margin-bottom: 20px;
-        }
+    .img-thumbnail,
+    .form-control {
+        margin-bottom: 10px;
     }
 }
 

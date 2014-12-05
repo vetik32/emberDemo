@@ -1,4 +1,5 @@
-/* global visit,andThen,click,fillIn,find,module */
+/* global visit,andThen,click,fillIn,find,module *//*
+
 
 Emberdemo.setupForTesting();
 Emberdemo.injectTestHelpers();
@@ -41,3 +42,4 @@ test('new comment is added', function () {
         equal(find(commentsSelector).last().find('.comment').text(), newComment);
     });
 });
+*/

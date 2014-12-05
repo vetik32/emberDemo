@@ -1,0 +1,26 @@
+<ol class="breadcrumb">
+    <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
+    <li class="active">Post</li>
+</ol>
+
+<h3>{{model.content}}</h3>
+
+{{#with comments as model.comments}}
+
+    <div class="well comments-placeholder">
+        {{#if comments}}
+            {{view 'comments'}}
+        {{else}}
+            no comments.
+        {{/if}}
+    </div>
+{{/with}}
+
+{{#if comments}}
+    {{#link-to 'post.comment' model}}
+        Comment
+    {{/link-to}}
+{{else}}
+    <span class="commentsCount">Be first to </span>{{#link-to 'post.comment' model}}comment{{/link-to}}.
+{{/if}}
+{{outlet}}

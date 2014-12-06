@@ -10,17 +10,14 @@
     <div class="well comments-placeholder">
         {{#if comments}}
             {{view 'comments'}}
-        {{else}}
-            no comments.
-        {{/if}}
+            {{~else~}}
+            No Comments.
+        {{~/if~}}
     </div>
 {{/with}}
 
-{{#if comments}}
-    {{#link-to 'post.comment' model}}
-        Comment
-    {{/link-to}}
-{{else}}
-    <span class="commentsCount">Be first to </span>{{#link-to 'post.comment' model}}comment{{/link-to}}.
-{{/if}}
+<p>
+    {{#link-to 'post.comment' model  class="btn btn-primary"}}Add New Comment{{/link-to}}
+</p>
+
 {{outlet}}
